@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup form</title>
+    <link rel="stylesheet" href="../assets/css/signup2.css" />
+  </head>
+  <body>
+
+    <img class="wave" src="../assets/images/wave.png" />
+    <div class="container">
+      <div class="img">
+        <img src="../assets/images/phone.svg" />
+      </div>
+    <div class="container2">
+      <h1>WELCOME</h1>
+      <form id="form">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          pattern="[A-Z a-z]{.32}"
+          value="Razak"
+          required
+        /><br /><br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value="razak@gmail.com"
+          required
+        /><br /><br />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value="123456"
+          pattern="[A-Z a-z 0-9]{1,20}"
+          required
+        /><br /><br />
+        <label for="password">Confirm-Password:</label>
+        <input
+          type="password"
+          id="c-password"
+          name="Confirm-password"
+          pattern="[A-Z a-z 0-9]{1,20}"
+          value="123456"
+          required
+        /><br /><br />
+        <button type="submit">signup</button>
+      </form>
+
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        import {
+          getDatabase,
+          set,
+          ref,
+          onValue,
+          push,
+        } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyD2u2kaaofh9colJXah7WdKmfojbd2Z4Yw",
+          authDomain: "wellness-diet.firebaseapp.com",
+          projectId: "wellness-diet",
+          storageBucket: "wellness-diet.appspot.com",
+          messagingSenderId: "928060559294",
+          appId: "1:928060559294:web:eacf7adfb3b2bfb7e0b3ef",
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        let database = getDatabase();
+
+        console.log(database);
+
+        const starCountRef = ref(database, "name/");
+        onValue(starCountRef, (snapshot) => {
+          const data = snapshot.val();
+          console.log(data);
+        });
+      </script>
+
+      <script>
+        let checkPass;
+        const signUpForm = document.getElementById("form");
+        signUpForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let userdata = [];
+          if (localStorage.getItem("signUp") != null) {
+            userdata = JSON.parse(localStorage.getItem("signUp"));
+          }
+          let user_name = document.getElementById("username").value.trim();
+          let user_email = document.getElementById("email").value.trim();
+          let user_password = document.getElementById("password").value.trim();
+          let confirm_password = document
+            .getElementById("c-password")
+            .value.trim();
+
+          if (user_password != confirm_password) {
+            checkPass = false;
+            alert("Password does not match");
+            return;
+          } else {
+            let userObj = {
+              user_name,
+              user_email,
+              user_password,
+              confirm_password,
+              user_id: Date.now(),
+            };
+
+            userdata.push(userObj);
+            const str = JSON.stringify(userdata);
+            localStorage.setItem("signUp", str);
+            alert("Successfully Created your Account");
+            window.location.href = "./login2.html";
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

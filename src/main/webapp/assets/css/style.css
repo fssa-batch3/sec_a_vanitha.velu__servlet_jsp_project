@@ -1,0 +1,402 @@
+body {
+  background-color: white;
+  margin: 0;
+  font-family: "QuickSand", sans-serif;
+}
+
+.container2 {
+  border: 2px solid black;
+  width: 600px;
+  height: 300px;
+  background-color: rgb(231, 225, 225);
+  /* border-radius: 10px; */
+  border: 0px;
+  margin-left: 450px;
+  padding: 30px;
+  margin-top: 200px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.container2 h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+.container2 h2 {
+  color: black;
+}
+
+.btn button {
+  margin-left: 340px;
+  height: 50px;
+  width: 150px;
+  border: 0px;
+  background-color: #03c988;
+  color: white;
+  cursor: pointer;
+}
+.btn button:hover {
+  background-color: grey;
+}
+
+.testimonals {
+  padding: 40px 0;
+  /* background-color: #03c988; */
+  color: black;
+  text-align: center;
+  margin-top: 110px;
+}
+.inner {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.inner h1 {
+  color: black;
+  text-shadow: #888888;
+}
+
+.border {
+  width: 300px;
+  height: 5px;
+  background-color: rgb(56, 54, 54);
+  margin: 26px auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col {
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.testimonal {
+  background-color: whitesmoke;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.testimonal img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.stars {
+  color: rgb(255, 98, 0);
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 960px) {
+  .col {
+    flex: 100%;
+    max-width: 80%;
+  }
+}
+.calculator {
+  background-color: #f9f9f9;
+  display: flex;
+  margin-top: 30px;
+}
+.image {
+  padding: 20px;
+}
+.bmi {
+  margin-left: 200px;
+}
+.bmi button {
+  padding: 7px;
+  margin-top: 20px;
+  margin-left: 300px;
+  background-color: black;
+  color: white;
+}
+.bmi img {
+  margin-left: 280px;
+}
+input {
+  padding: 10px;
+  width: 300px;
+}
+
+.container {
+  max-width: 1170px;
+  background-color: red;
+  margin: auto;
+}
+.rap {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #03c988;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(145, 29, 29);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: whitesmoke;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(86, 86, 86);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: whitesmoke;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: aliceblue;
+  background-color: rgb(74, 71, 71);
+}
+a {
+  text-decoration: none;
+}
+
+.heart {
+  display: flex;
+}
+#holecontains {
+  display: flex;
+  margin-top: 30px;
+}
+.fst {
+  margin-top: 25px;
+  margin-left: 6em;
+}
+.fst h2 {
+  font-size: 4em;
+}
+.fst p {
+  font-size: 20px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+/* body {
+  background: #f0f8ea;
+
+} */
+
+.wrapper {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: #03c988;
+  color: #ebebd3;
+  position: relative;
+  padding: 1em 0;
+}
+
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.main-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #464655;
+  height: 0;
+  overflow: hidden;
+}
+
+.main-nav-open {
+  height: auto;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  /* list-style: none; */
+}
+
+.main-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.main-nav li:last-child {
+  border-bottom: none;
+}
+
+.main-nav a {
+  color: white;
+  display: block;
+  padding: 1em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #e4b363;
+  color: #464655;
+}
+
+.nav-icon {
+  display: inline-block;
+  font-size: 1.3em;
+  margin-right: 0.5em;
+  text-align: center;
+  width: 1.1em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.2em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    border: none;
+  }
+
+  .main-nav a {
+    padding: 0;
+    margin-left: 2em;
+  }
+
+  .main-nav a:hover,
+  .main-nav a:focus {
+    background: transparent;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+}
+
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: hsl(0, 0%, 87%);
+}
+.main3 {
+  width: 400px;
+  height: 300px;
+  margin-left: 250px;
+  margin-top: 40px;
+}
+.drop_btn {
+  display: inline-block;
+}
+.dropdown-content {
+  background-color: grey;
+  z-index: 1;
+  display: none;
+}
+.dropdown-content a {
+  padding: 8px;
+}
+.nav_dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.about_us {
+  background-color: whitesmoke;
+  box-shadow: 5px 10px 18px #888888;
+  padding-bottom: 20px;
+  margin-left: 300px;
+  width: 850px;
+}
+.about_us h1 {
+  padding-top: 60px;
+  margin-left: 40px;
+}
+.about_us p {
+  padding-left: 40px;
+  padding-right: 20px;
+}

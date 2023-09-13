@@ -1,0 +1,239 @@
+/* Apply a general style to all div elements within the form */
+div {
+  margin-bottom: 10px;
+}
+.main {
+  background-color: whitesmoke;
+  padding-left: 40px;
+  box-shadow: 5px 10px 18px #888888;
+  width: 400px;
+  height: 350px;
+  border-radius: 20px;
+  margin-left: 550px;
+  margin-top: 150px;
+  padding-top: 20px;
+}
+
+/* Style the labels */
+label {
+  display: block;
+  font-weight: bold;
+}
+
+/* Style the input fields */
+input[type="number"] {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style the button */
+button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #03c988;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Style the result div */
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.rap {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #03c988;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(145, 29, 29);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: whitesmoke;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(86, 86, 86);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: whitesmoke;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: aliceblue;
+  background-color: rgb(74, 71, 71);
+}
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: #03c988;
+  color: #ebebd3;
+  position: relative;
+  padding: 1em 0;
+}
+
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.main-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #03c988;
+  height: 0;
+  overflow: hidden;
+}
+
+.main-nav-open {
+  height: auto;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.main-nav li:last-child {
+  border-bottom: none;
+}
+
+.main-nav a {
+  color: white;
+  display: block;
+  padding: 1em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #e4b363;
+  color: #464655;
+}
+
+.nav-icon {
+  display: inline-block;
+  font-size: 1.3em;
+  margin-right: 0.5em;
+  text-align: center;
+  width: 1.1em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.2em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    border: none;
+  }
+
+  .main-nav a {
+    padding: 0;
+    margin-left: 2em;
+  }
+
+  .main-nav a:hover,
+  .main-nav a:focus {
+    background: transparent;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+}

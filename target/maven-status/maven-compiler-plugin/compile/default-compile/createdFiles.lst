@@ -1,0 +1,6 @@
+com\fssa\wellnessDiet\DietitianServlet.class
+com\fssa\wellnessDiet\LogoutServlet.class
+com\fssa\wellnessDiet\profileServlet.class
+com\fssa\wellnessDiet\GetAllUserServlet.class
+com\fssa\wellnessDiet\LoginServlet.class
+com\fssa\wellnessDiet\RegisterServlet.class
