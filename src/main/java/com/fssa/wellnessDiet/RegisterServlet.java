@@ -2,7 +2,6 @@ package com.fssa.wellnessDiet;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +15,7 @@ import com.fssa.wellnessDiet.service.exception.ServiceException;
 /**
  * Servlet implementation class RegisterServlet
  */
-@WebServlet("/register")
+@WebServlet("/patient_signup")
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -25,23 +24,21 @@ public class RegisterServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String name = request.getParameter("username");
+		String type = request.getParameter("type");
 
-		User user = new User(name, email, password);
+		System.out.println(1);
+		User user = new User(name, email, password,type, 0);
 
 		UserService users = new UserService();
 
-		System.out.println(user);
-//			 new UserService().registerUser(user);
 		try {
-			if (users.registerUser(user)) {
-				response.sendRedirect("login.jsp");
-
+			
+			if (!users.registerUser(user)) {
+				throw new ServiceException("user is not valid");
+			}else {
+				response.sendRedirect("patient_login.jsp");
 			}
-		} catch (ServiceException e) {
-		
-			e.printStackTrace();
-		} catch (IOException e) {
-		
+		} catch (ServiceException | IOException e) {
 			e.printStackTrace();
 		}
 

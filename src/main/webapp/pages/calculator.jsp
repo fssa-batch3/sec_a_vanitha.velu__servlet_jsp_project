@@ -53,11 +53,11 @@
         <input type="number" id="fat" value="17" placeholder="Enter fat in grams" />
       </div>
       <div>
-        <label for="protein">Protein (g):</label>
+        <label for="protien">Protien (g):</label>
         <input
           type="number"
           id="protein" value="8"
-          placeholder="Enter protein in grams"
+          placeholder="Enter protien in grams"
         />
       </div>
       <button onclick="calculateTotalCalories()">
@@ -71,20 +71,20 @@
         const calories = parseInt(document.getElementById("calories").value);
         const carbsGrams = parseInt(document.getElementById("carbs").value);
         const fatGrams = parseInt(document.getElementById("fat").value);
-        const proteinGrams = parseInt(document.getElementById("protein").value);
+        const protienGrams = parseInt(document.getElementById("protien").value);
 
         // Macronutrient breakdown (calories per gram)
         const carbCaloriesPerGram = 4;
         const fatCaloriesPerGram = 9;
-        const proteinCaloriesPerGram = 4;
+        const protienCaloriesPerGram = 4;
 
         // Calculate calorie values for each macronutrient
         const carbCalories = carbsGrams * carbCaloriesPerGram;
         const fatCalories = fatGrams * fatCaloriesPerGram;
-        const proteinCalories = proteinGrams * proteinCaloriesPerGram;
+        const protienCalories = protienGrams * protienCaloriesPerGram;
 
         // Calculate total calories
-        const totalCalories = carbCalories + fatCalories + proteinCalories;
+        const totalCalories = carbCalories + fatCalories + protienCalories;
 
         // Display the result
         const resultDiv = document.getElementById("result");
@@ -94,7 +94,7 @@
         document.getElementById("calories").value = "";
         document.getElementById("carbs").value = "";
         document.getElementById("fat").value = "";
-        document.getElementById("protein").value = "";
+        document.getElementById("protien").value = "";
       }
     </script>
 

@@ -214,6 +214,7 @@ a {
 }
 .fst h2 {
   font-size: 4em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .fst p {
   font-size: 20px;

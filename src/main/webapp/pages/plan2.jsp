@@ -82,7 +82,7 @@
           json.push(arr);
           window.localStorage.setItem("diet_details", JSON.stringify(json));
           alert("Successfully posted");
-          window.open("/weight loss2.html");
+          window.open("/weight loss2.jsp");
         }
       });
     </script>

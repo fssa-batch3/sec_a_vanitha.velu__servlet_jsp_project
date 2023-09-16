@@ -15,7 +15,7 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="dietitian_header.jsp"></jsp:include>
 	<h1>Error Page</h1>
 	<p>Page doesn't exist</p>
 	<p>

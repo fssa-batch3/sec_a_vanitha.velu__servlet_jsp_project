@@ -12,45 +12,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+  
+  <jsp:include page="patient_header.jsp"></jsp:include>  
   <body>
-    <header id="header">
-      <!-- <div class="wrapper">
-          <h1 class="logo">WELLNESS<span>DIET</span></h1>
-          <nav class="main-nav">
-            <ul>
-              <li>
-                <a href="./index.html">Home </a>
-              </li>
-              <li>
-                <a href="./pages/about2.html">About</a>
-              </li>
-              <li>
-                <a href="./pages/diet2.html">Consultation</a>
-              </li>
-              <li>
-                <a href="./pages/active.html">Create plans</a>
-              </li>
-              <li>
-              <a href="../pages/appoinment_list.html">appointment list</a>
-            </li>
-              <li>
-                <a href="./pages/contact2.html">Contact Us</a>
-              </li>
-              <li>
-                <a href="./pages/profile2.html">Profile</a>
-              </li>
-              <li>
-              <li class="nav_dropdown">
-                <a class="drop_btn" href="javascript:void(0)"><div class="nav_dropbtn">Login</div></a>
-                <div class="dropdown-content">
-                  <a href="./pages/login2.html">Dietitian</a>
-                  <a href="./pages/patient_login.html">Patient</a>
-               
-                </div>
-              </li>
+    <header id="user_header">
 
-            </ul>
-          </nav> -->
     </header>
 
     <div id="holecontains">
@@ -62,11 +28,11 @@
           simply maintain a healthy lifestyle, we have a plan that's right for
           you.
         </p>
-        <!-- <div class="btn">
-          <a href="./pages/diet2.html"
+        <div class="btn">
+          <a href="./pages/diet2.jsp"
             ><button><strong>Book an Appoinment</strong></button></a
           >
-        </div> -->
+        </div>
       </div>
 
       <section class="heart" id="main">
@@ -143,7 +109,7 @@
                 width="200"
                 alt=""
               />
-              <div class="name">Iasdfghjkl</div>
+              <div class="name">Ishu</div>
               <div class="stars">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -178,11 +144,11 @@
         nutritionists work hard to solve all your dietary troubles and make you
         fit and healthy again.
       </p>
-      <!-- <div class="btn">
-        <a href="./pages/diet2.html"
+      <div class="btn">
+        <a href="../pages/diet2.jsp"
           ><button><strong>Book an Appoinment</strong></button></a
         >
-      </div> -->
+      </div>
     </div>
 
     <div class="calculator">
@@ -292,6 +258,6 @@
         }
       }
     </script>
-    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/user_header.js"></script>
   </body>
 </html>

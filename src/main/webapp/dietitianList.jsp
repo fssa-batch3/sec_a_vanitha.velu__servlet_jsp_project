@@ -44,7 +44,7 @@
 	<%
 	List<Dietitian> dietitian = (List<Dietitian>) request.getAttribute("dietitian");
 	for (Dietitian d : dietitian) {
-	System.out.println(d.getUserID());
+	System.out.println(d.getdietitian_id());
 	}
 	%>
 	<table>
@@ -65,7 +65,7 @@
 			
 		}
 		for (Dietitian d : dietitian) {
-		%>
+		%> 
 		<tr>
 		 
 			<td><%=d.getDietitianName()%></td>
@@ -80,10 +80,6 @@
 		}
 
 		%>
-
-
-
-
 
 	</table>
 </html>

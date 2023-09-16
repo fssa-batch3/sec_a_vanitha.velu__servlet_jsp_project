@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>home page</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+  
+  <jsp:include page="dietitian_header.jsp"></jsp:include>
   <body>
-    <header id="user_header">
+    <header id="header">
       <!-- <div class="wrapper">
           <h1 class="logo">WELLNESS<span>DIET</span></h1>
           <nav class="main-nav">
@@ -45,6 +47,7 @@
                 <div class="dropdown-content">
                   <a href="./pages/login2.html">Dietitian</a>
                   <a href="./pages/patient_login.html">Patient</a>
+               
                 </div>
               </li>
 
@@ -61,11 +64,11 @@
           simply maintain a healthy lifestyle, we have a plan that's right for
           you.
         </p>
-        <div class="btn">
+        <!-- <div class="btn">
           <a href="./pages/diet2.html"
             ><button><strong>Book an Appoinment</strong></button></a
           >
-        </div>
+        </div> -->
       </div>
 
       <section class="heart" id="main">
@@ -85,7 +88,7 @@
           <div class="col">
             <div class="testimonal">
               <img
-                src="./assets/images/sabana fat.jpg"
+                src="../assets/images/sabana fat.jpg"
                 height="200"
                 width="200"
                 alt=""
@@ -111,7 +114,7 @@
           <div class="col">
             <div class="testimonal">
               <img
-                src="./assets/images/muthu slim.jfif"
+                src="../assets/images/muthu slim.jfif"
                 height="200"
                 width="200"
                 alt=""
@@ -137,7 +140,7 @@
           <div class="col">
             <div class="testimonal">
               <img
-                src="./assets/images/aishu.jfif"
+                src="../assets/images/aishu.jfif"
                 height="200"
                 width="200"
                 alt=""
@@ -177,11 +180,11 @@
         nutritionists work hard to solve all your dietary troubles and make you
         fit and healthy again.
       </p>
-      <div class="btn">
+      <!-- <div class="btn">
         <a href="./pages/diet2.html"
           ><button><strong>Book an Appoinment</strong></button></a
         >
-      </div>
+      </div> -->
     </div>
 
     <div class="calculator">
@@ -223,7 +226,7 @@
             <button onclick="calculateBMI()">Calculate BMI</button><br />
           </form>
           <img
-            src="./assets/images/bmi-removebg-preview.png"
+            src="../assets/images/bmi-removebg-preview.png"
             width="150"
             height="100"
             alt=""
@@ -291,6 +294,6 @@
         }
       }
     </script>
-    <script src="../assets/js/user_header.js"></script>
+    <script src="../assets/js/header.js"></script>
   </body>
 </html>

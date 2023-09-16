@@ -160,7 +160,7 @@ header::after {
 	background-color: grey;
 }
 </style>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="dietitian_header.jsp"></jsp:include>
 </head>
 <body>
 

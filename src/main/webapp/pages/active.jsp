@@ -200,7 +200,7 @@
           json.push(arr);
           window.localStorage.setItem("diet_details", JSON.stringify(json));
           alert("Successfully posted");
-          window.location.href="../pages/weight loss2.html";
+          window.location.href="../pages/weight loss2.jsp";
         }
         
       });

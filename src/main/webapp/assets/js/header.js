@@ -6,21 +6,17 @@ const before_login = `
           <nav class="main-nav">
             <ul>
               <li>
-                <a href="./index.html">Home </a>
+                <a href="./index.jsp">Home </a>
               </li>
               <li>
-                <a href="./about2.html">About</a>
+                <a href="./about2.jsp">About</a>
               </li>
               
               <li>
-                <a href="./contact2.html">Contact Us</a>
+                <a href="./contact2.jsp">Contact Us</a>
               </li>
-              <li class="nav_dropdown">
-                <a class="drop_btn" href="javascript:void(0)"><div class="nav_dropbtn">Login</div></a>
-                <div class="dropdown-content">
-                  <a href="./login2.html">Dietitian</a>
-                  <a href="./patient_login.html">Patient</a>
-                </div>
+              <li>
+                  <a href="../patient_login.jsp">Login</a>
               </li>
 
             </ul>
@@ -31,25 +27,25 @@ const after_login = `
           <nav class="main-nav">
             <ul>
               <li>
-                <a href="./index.html">Home </a>
+                <a href="./index.jsp">Home </a>
               </li>
               <li>
-                <a href="./about2.html">About</a>
+                <a href="./about2.jsp">About</a>
               </li>
 
               <li>
-              <a href="./appoinment_list.html">appointment list</a>
+              <a href="./appoinment_list.jsp">appointment list</a>
             </li>
               <li>
-              <a href="./active.html">Create plans</a>
+              <a href="./active.jsp">Create plans</a>
             </li>
               
             
               <li>
-              <a href="./profile2.html">Profile</a>
+              <a href="./profile2.jsp">Profile</a>
             </li>
               <li>
-                <a href="./contact2.html">Contact Us</a>
+                <a href="./contact2.jsp">Contact Us</a>
               </li>
               
 

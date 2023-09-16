@@ -22,19 +22,16 @@ public class GetAllUserServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		UserService userService = new UserService();
+		List<User> users = null;
+		try {
+			users = userService.getAllUser();
+		} catch (ServiceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		request.setAttribute("users", users);
+		request.getRequestDispatcher("display_all_users.jsp").forward(request, response);
 
-		
-			List<User> users = null;
-			try {
-				users = UserService.getAllUser1();
-			} catch (ServiceException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			request.setAttribute("users", users);
-			request.getRequestDispatcher("display_all_users.jsp").forward(request, response);
-
-	
-
-}
+	}
 }

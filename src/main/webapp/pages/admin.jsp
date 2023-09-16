@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="./assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -32,11 +32,11 @@
       </header>
 <div class="container">
       <div class="box">
-       <a href="./pages/form.html"> <h3>ADD DOCTORS</h3></a>
+       <a href="./form.jsp"> <h3>ADD DOCTORS</h3></a>
       </div>
 
       <div class="box2">
-      <a href="./pages/appoinment_list.html">  <h3>View appoinment List's</h3></a>
+      <a href="./appoinment_list.jsp">  <h3>View appoinment List's</h3></a>
       </div>
     </div>
     <footer class="footer">
@@ -76,7 +76,7 @@
 let logout = document.getElementById("logout-btn");
 logout.addEventListener("click", function (e) {
   localStorage.removeItem("patient_login");
-  window.location.href="../index.html";
+  window.location.href="../index.jsp";
 })
       </script>
 </body>

@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="com.fssa.wellnessDiet.model.Dietitian, java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Edit Dietitian</title>
 </head>
+<body>
 <style>
 
 #form {
@@ -76,7 +78,7 @@
 
 </style>
 <body>
-<form id="form"  action="DietitianServlet" method="post">
+<form id="form"  action="../EditDietitianServlet" method="post">
       <div class="inputBox">
         <input id="image" type="text" name="DietitianUrl" required="required" />
         <span>Image Url</span>
@@ -98,7 +100,7 @@
         <input id="about" type="text" name="DietitianAddress" required="required" />
         <span>Address</span>
       </div>
-      <button type="submit" class="btn5">Create</button>
+      <button type="submit" class="btn5">Edit</button>
     </div>
     </form>
 
