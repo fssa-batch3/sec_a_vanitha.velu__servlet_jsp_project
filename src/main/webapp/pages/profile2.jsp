@@ -1,3 +1,5 @@
+<%@ page import="com.fssa.wellnessDiet.service.*"%>
+<%@ page import="com.fssa.wellnessDiet.model.*"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,27 +35,39 @@
         </nav>
     </header>
     <div class="container">
+    <% 
+    
+    String email = (String) session.getAttribute("loggedInEmail");
+    User user = new User();
+    Dietitian dietitianObj = new Dietitian();
+    DietitianService dietitian = new DietitianService();
+    UserService userService = new UserService();
+    user = userService.findingUserByEmail(email);
+    System.out.println(user.getUserId());
+    dietitianObj = dietitian.findDietitianByUserId(user.getUserId());
+    
+    %>
 
       <form id="editForm">
         <div class="input">
           <label for="name">Name:</label>
-          <input id="name" class="input_edit" type="text" />
+          <input id="name" class="input_edit" type="text" value="<%= dietitianObj.getDietitianName() %>"/>
         </div>
         <div class="input">
-          <label for="phnumber">Number:</label>
-          <input id="phnumber" class="input_edit" value="9876543210" type="number" />
+          <label for="phnumber">ImageURL:</label>
+          <input id="phnumber" class="input_edit" type="text" value="<%= dietitianObj.getDietitianUrl() %>" />
         </div>
         <div class="input">
           <label for="qualification">Qualification:</label>
-          <input id="qualification" class="input_edit" value="Dietitian" type="text" />
+          <input id="qualification" class="input_edit" value="Dietitian" type="text" value="<%= dietitianObj.getDietitianQualification() %>"/>
         </div>
         <div class="input">
           <label for="specialization">Specialization:</label>
-          <input id="specialization" class="input_edit" value="Co-Founder" type="text" />
+          <input id="specialization" class="input_edit" value="Co-Founder" type="text" value="<%= dietitianObj.getDietitianQualification() %>"/>
         </div>
         <div class="input">
           <label for="email">Email:</label>
-          <input id="email" class="input_edit" type="email" />
+          <input id="email" class="input_edit" type="email" value="<%= email %>"/>
         </div>
         <div class="input">
           <label for="password">Password:</label>
@@ -65,7 +79,7 @@
           <button type="submit">Save</button>
           <button class="edit_btn" onclick="edit()">Edit</button>
           <button id="delete">DELETE</button>
-          <button id="logout-btn">Log Out</button>
+          <button  id="logout-btn"><a href="LogoutServlet">Log Out</a></button>
         </div>
       </form>
     </div>

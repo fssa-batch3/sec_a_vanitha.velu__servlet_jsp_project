@@ -37,8 +37,12 @@ public class LoginServlet extends HttpServlet {
 
 			User user = UserService.findingUserByEmail(email);
 			session.setAttribute("User", user);
+			
 
-			if (user.getType().equals("dietitian")) {
+			if (user.getType().equalsIgnoreCase("dietitian")) {
+				session.setAttribute("User", user);
+				System.out.println(user.toString());
+				System.out.println(user.getUserId());
 				dispatcher = request.getRequestDispatcher("index2.jsp");
 			} else {
 				dispatcher = request.getRequestDispatcher("pages/patient_index.jsp");

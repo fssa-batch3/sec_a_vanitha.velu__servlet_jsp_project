@@ -1,6 +1,7 @@
 package com.fssa.wellnessDiet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -14,27 +15,29 @@ import com.fssa.wellnessDiet.model.Dietitian;
 import com.fssa.wellnessDiet.service.DietitianService;
 import com.fssa.wellnessDiet.service.exception.ServiceException;
 
-	@WebServlet("/GetAllDietitianServlet")
+	@WebServlet("/GetAllDietitianServlet") 
 	public class GetAllDietitianServlet extends HttpServlet {
 		private static final long serialVersionUID = 1L;
 
 		protected void doGet(HttpServletRequest request, HttpServletResponse response)
 				throws ServletException, IOException {
-
+			PrintWriter out = response.getWriter();
 			DietitianService dietitianService = new DietitianService();
 			List<Dietitian> dietitian = null;
 			try {
+				System.out.println("try");
 				dietitian = dietitianService.getAllDietitian();
-				for(Dietitian d :dietitian) {
-				System.out.println(d.getDietitianAddress());
-				System.out.println(d.getDietitianName());
-				}
+				System.out.println("get all service");
 				request.setAttribute("dietitian", dietitian);
-				RequestDispatcher dispatcher = request.getRequestDispatcher("dietitianList.jsp");
+				System.out.println(dietitian);
+			
+	
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/diet2.jsp");
 				dispatcher.forward(request, response);
+		
 				
 			} catch (ServiceException e) {
-				e.printStackTrace();
+				out.println(e.getMessage());
 			}
 		}
 	}

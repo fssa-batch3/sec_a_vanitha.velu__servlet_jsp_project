@@ -41,7 +41,7 @@
     background-color: #f2f2f2;
   }
 </style>
-</style>
+
 </head>
 <body>
 	<h1>All Registered Users</h1>
@@ -62,8 +62,6 @@
 		<tr>
 		    <td><%=user.getUserId()%></td>
 			<td><%=user.getEmail()%></td>
-			
-			
 			
 		
 		</tr>

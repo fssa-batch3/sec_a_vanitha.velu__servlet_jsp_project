@@ -1,0 +1,104 @@
+.container1 {
+  display: flex;
+  margin-left: 30px;
+}
+body {
+  background: linear-gradient(#f9f9f9, rgb(125, 123, 123));
+  font-family: "Montserrat", sans-serif;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  gap: 50px;
+  list-style: none;
+  font-size: larger;
+  margin-top: 40px;
+  /* margin-left: 300px; */
+}
+.home a {
+  color: black;
+}
+
+.home :hover {
+  border-bottom: 2px solid rgb(79, 63, 3);
+}
+.container img {
+  margin-left: 300px;
+  margin-top: 60px;
+}
+p {
+  width: 700px;
+  font-size: 25px;
+  margin-left: 300px;
+}
+.rap {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: rgb(54, 51, 51);
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(145, 29, 29);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: 300;
+  color: rgb(226, 220, 220);
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: whitesmoke;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(86, 86, 86);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: whitesmoke;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: aliceblue;
+  background-color: rgb(74, 71, 71);
+}
+a {
+  text-decoration: none;
+}

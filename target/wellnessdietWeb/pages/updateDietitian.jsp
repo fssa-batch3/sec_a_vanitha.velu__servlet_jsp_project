@@ -76,7 +76,7 @@
 
 </style>
 <body>
-<form id="form"  action="DietitianServlet" method="post">
+<form id="form"  action="UpdateDietitianServlet" method="post">
       <div class="inputBox">
         <input id="image" type="text" name="DietitianUrl" required="required" />
         <span>Image Url</span>
@@ -98,7 +98,7 @@
         <input id="about" type="text" name="DietitianAddress" required="required" />
         <span>Address</span>
       </div>
-      <button type="submit" class="btn5">Create</button>
+      <button type="submit" class="btn5">Update</button>
     </div>
     </form>
 

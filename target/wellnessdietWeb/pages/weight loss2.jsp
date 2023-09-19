@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weight loss</title>
+    <link rel="stylesheet" href="../assets/css/weight loss2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+ 
+
+    <header>
+      <div class="wrapper">
+        <h1 class="logo">WELLNESS<span>DIET</span></h1>
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="../patient_index.html">Home </a>
+            </li>
+            <li>
+              <a href="./about2.html">About</a>
+            </li>
+            <li>
+              <a href="./plan2.html">Create plans</a>
+            </li>
+            <li>
+              <a href="./contact2.html">Contact Us</a>
+            </li>
+           
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search...">
+      <button type="submit" id="search-button">Search</button>
+    </div>
+    
+  <a href="./calculator.html"> <div class="calculator"><h3>Calorie calculator</h3></div></a> 
+   
+    <div class="card-container">  
+       <div class="card">
+        <img src="https://spoonacular.com/recipeImages/632502-312x231.jpg" alt="Recipe Image">
+       <div class="card-details">
+        <h2 class="title">Apple Cheddar Turkey Burgers With Chipotle Yogurt Sauce</h2>
+        <ul class="nutrition-info">
+          <li><span>Calories:</span> 362</li>
+          <li><span>Carbs:</span> 19g</li>
+          <li><span>Fat:</span> 15g</li>
+          <li><span>Protein:</span> 38g</li>
+        </ul>
+      </div>
+    </div>
+  
+    </div>
+    
+
+    <footer class="footer">
+      <div class="container4">
+        <div class="rap">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Diet counselling</a></li>
+              <li><a href="#">Diet Food</a></li>
+              <li><a href="#">Diet chart</a></li>
+              <li><a href="#">Vitual consulation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get help</h4>
+            <ul>
+              <li><a href="#">Chat</a></li>
+              <li><a href="#">Consulting</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-youtube-play"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+    <script>
+      const apiKey = 'e151df548e254f82aad9ab8a70054dd1';
+      const url = `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${apiKey}&maxCalories=500&maxCarbs=50&number=100`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // Handle the API response data
+    console.log(data);
+
+ 
+
+const cardContainer = document.querySelector(".card-container");
+
+
+for (let i = 0; i < 50; i++) {
+  const recipe = data[i];
+  console.log(recipe)
+
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const image = document.createElement("img");
+  image.src = recipe.image;
+  image.alt = "Recipe Image";
+  card.appendChild(image);
+
+  const cardDetails = document.createElement("div");
+  cardDetails.className = "card-details";
+
+  const title = document.createElement("h2");
+  title.className = "title";
+  title.textContent = recipe.title;
+  cardDetails.appendChild(title);
+
+  const nutritionInfo = document.createElement("ul");
+  nutritionInfo.className = "nutrition-info";
+
+  const nutritionItems = [
+    { label: "Calories:", value: recipe.calories },
+    { label: "Carbs:", value: recipe.carbs },
+    { label: "Fat:", value: recipe.fat },
+    { label: "Protein:", value: recipe.protein }
+  ];
+
+  for (let j = 0; j < nutritionItems.length; j++) {
+    const item = nutritionItems[j];
+
+    const listItem = document.createElement("li");
+    const label = document.createElement("span");
+    label.textContent = item.label;
+    listItem.appendChild(label);
+
+    const value = document.createTextNode(item.value);
+    listItem.appendChild(value);
+
+    nutritionInfo.appendChild(listItem);
+  }
+
+  cardDetails.appendChild(nutritionInfo);
+  card.appendChild(cardDetails);
+  cardContainer.appendChild(card);
+}
+  
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+  // search feature
+  let searchbar = document.getElementById("search-input");
+  const cards = document.getElementsByClassName("card");
+
+  searchbar.addEventListener("input", () => {
+    for (const element of cards) {
+      if (
+        element.innerHTML.toLowerCase().includes(searchbar.value.toLowerCase())
+      ) {
+        element.style.display = "block";
+      }
+       else {
+        element.style.display = "none";
+      }
+    }
+  });
+
+
+    </script>
+  </body>
+</html>
