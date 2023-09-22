@@ -12,48 +12,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  
+   <body>
   <jsp:include page="dietitian_header.jsp"></jsp:include>
-  <body>
-    <header id="header">
-      <!-- <div class="wrapper">
-          <h1 class="logo">WELLNESS<span>DIET</span></h1>
-          <nav class="main-nav">
-            <ul>
-              <li>
-                <a href="./index.html">Home </a>
-              </li>
-              <li>
-                <a href="./pages/about2.html">About</a>
-              </li>
-              <li>
-                <a href="./pages/diet2.html">Consultation</a>
-              </li>
-              <li>
-                <a href="./pages/active.html">Create plans</a>
-              </li>
-              <li>
-              <a href="../pages/appoinment_list.html">appointment list</a>
-            </li>
-              <li>
-                <a href="./pages/contact2.html">Contact Us</a>
-              </li>
-              <li>
-                <a href="./pages/profile2.html">Profile</a>
-              </li>
-              <li>
-              <li class="nav_dropdown">
-                <a class="drop_btn" href="javascript:void(0)"><div class="nav_dropbtn">Login</div></a>
-                <div class="dropdown-content">
-                  <a href="./pages/login2.html">Dietitian</a>
-                  <a href="./pages/patient_login.html">Patient</a>
-               
-                </div>
-              </li>
-
-            </ul>
-          </nav> -->
-    </header>
+ 
+ 
 
     <div id="holecontains">
       <div class="fst">
@@ -88,7 +50,7 @@
           <div class="col">
             <div class="testimonal">
               <img
-                src="../assets/images/sabana fat.jpg"
+                src="<%= request.getContextPath() %>/assets/images/sabana fat.jpg"
                 height="200"
                 width="200"
                 alt=""
@@ -114,7 +76,7 @@
           <div class="col">
             <div class="testimonal">
               <img
-                src="../assets/images/muthu slim.jfif"
+                src="<%= request.getContextPath() %>/assets/images/muthu slim.jfif"
                 height="200"
                 width="200"
                 alt=""
@@ -140,7 +102,7 @@
           <div class="col">
             <div class="testimonal">
               <img
-                src="../assets/images/aishu.jfif"
+                src="<%= request.getContextPath() %>/assets/images/aishu.jfif"
                 height="200"
                 width="200"
                 alt=""
@@ -226,7 +188,7 @@
             <button onclick="calculateBMI()">Calculate BMI</button><br />
           </form>
           <img
-            src="../assets/images/bmi-removebg-preview.png"
+            src="<%= request.getContextPath() %>/assets/images/bmi-removebg-preview.png"
             width="150"
             height="100"
             alt=""
@@ -295,5 +257,7 @@
       }
     </script>
 
+
+<script src = "./assets/js/script.js"></script>
   </body>
 </html>

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/form2.css" />
+    <link
+      rel="stylesheet"
+      href="<%=request.getContextPath()%>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header>
@@ -14,52 +18,60 @@
         <nav class="main-nav">
           <ul>
             <li>
-              <a href="../index.html">Home </a>
+              <a href="<%=request.getContextPath()%>/pages/patient_index.jsp">Home </a>
             </li>
             <li>
-              <a href="./about2.html">About</a>
+              <a href="<%=request.getContextPath()%>/pages/about2.jsp">About</a>
             </li>
             <li>
-              <a href="./diet2.html">Consultation</a>
+              <a href="<%=request.getContextPath()%>/pages/diet2.jsp">Consultation</a>
             </li>
             <li>
-              <a href="./active.html">Create plans</a>
+              <a href="<%=request.getContextPath()%>/pages/active.jsp">Create plans</a>
             </li>
             <li>
-              <a href="./contact2.html">Contact Us</a>
+              <a href="<%=request.getContextPath()%>/pages/contact2.jsp">Contact Us</a>
             </li>
           
           </ul>
         </nav>
     </header>
-    <h1>BOOK APPOINMENT</h1>
-    <div class="main">
-      <form id="form" >
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="vinit" required />
+    <div class="container">
+  <h2>Dietitian Appointment</h2>
+  <form action="<%=request.getContextPath()%>/AddAppointmentServlet"
+		method="post">
+    <label for="patientName">Patient Name</label>
+    <input type="text" id="patientName" name="patientName" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="vanitha.velu@fssa.freshworks.com"  required />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
 
-        <label for="number">Phone Number:</label>
-        <input type="number" id="phonenumber" name="number" value="9876543210"  required />
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" required>
 
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" min="24-05-2023" required />
+    <label for="problem">Problem</label>
+    <select id="problem" name="problem" required>
+      <option value="Gain">Weight gain</option>
+      <option value="loss">Weight loss</option>
+      <option value="ordinary">Ordinary</option>
+    
+    </select>
 
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" required />
+    <label for="branch">Branch Name</label>
+    <select id="branch" name="branch" required>
+      <option value="Main Clinic">Chennai</option>
+      <option value="Branch 1">Perungudi</option>
+      <option value="Branch 2">T.nagar</option>
 
-        <label for="department">Department:</label>
-        <select id="department" name="department" required>
-          <option value="weight Gain">weight Gain</option>
-          <option value="weight Loss">weight Loss</option>
-          <option value="Healthy Diet">Healthy diet</option>
-        </select>
+    </select>
 
-        <button type="submit" id="submit_apt">Book Appointment</button>
-      </form>
-    </div>
+    <label for="dateTime">Date and Time</label>
+    <input type="datetime-local" id="dateTime" name="dateTime" required>
+
+    <button type="submit">Submit Appointment</button>
+  </form>
+</div>
+
 
     <footer class="footer">
       <div class="container4">

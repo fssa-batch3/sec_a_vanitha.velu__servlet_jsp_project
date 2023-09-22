@@ -46,8 +46,8 @@ if (loggedInEmail == null) {
                 <a href="<%= request.getContextPath() %>/pages/about2.jsp">About</a>
               </li>
 
-              <li>
-              <a href="<%= request.getContextPath() %>/pages/appoinment_list.jsp">appointment list</a>
+              <li> 
+              <a href="<%= request.getContextPath() %>/GetAllAppointmentServlet">appointment list</a> 
             </li>
               <li>
               <a href="<%= request.getContextPath() %>/pages/active.jsp">Create plans</a>
@@ -62,7 +62,9 @@ if (loggedInEmail == null) {
               <li>
                 <a href="<%= request.getContextPath() %>/pages/contact2.jsp">Contact Us</a>
               </li>
-              
+               <li>
+                <a href="patient_login.jsp" onclick = "logout_link()">log out</a>
+              </li>
 
             </ul>
           </nav>

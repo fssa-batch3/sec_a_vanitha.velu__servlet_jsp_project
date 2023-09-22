@@ -15,9 +15,6 @@
   
   <jsp:include page="patient_header.jsp"></jsp:include>  
   <body>
-    <header id="user_header">
-
-    </header>
 
     <div id="holecontains">
       <div class="fst">
@@ -29,7 +26,7 @@
           you.
         </p>
         <div class="btn">
-          <a href="./pages/diet2.jsp"
+          <a href="./GetAllDietitianServlet"
             ><button><strong>Book an Appoinment</strong></button></a
           >
         </div>
@@ -145,7 +142,7 @@
         fit and healthy again.
       </p>
       <div class="btn">
-        <a href="../pages/diet2.jsp"
+        <a href="./GetAllDietitianServlet"
           ><button><strong>Book an Appoinment</strong></button></a
         >
       </div>
@@ -258,6 +255,6 @@
         }
       }
     </script>
-
+<script src = "./assets/js/script.js"></script>
   </body>
 </html>

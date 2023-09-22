@@ -7,9 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/active.css" />
 
-    <link
+     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="<%=request.getContextPath()%>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
@@ -19,17 +19,17 @@
           <nav class="main-nav">
             <ul>
               <li>
-                <a href="../index.html">Home </a>
+                <a href="<%=request.getContextPath()%>/pages/patient_index.jsp">Home </a>
               </li>
               <li>
-                <a href="./about2.html">About</a>
+                <a href="<%=request.getContextPath()%>/pages/about2.jsp">About</a>
               </li>
               
               <li>
-                <a href="./active.html">Create plans</a>
+                <a href="<%=request.getContextPath()%>/pages/active.jsp">Create plans</a>
               </li>
               <li>
-                <a href="./contact2.html">Contact Us</a>
+                <a href="<%=request.getContextPath()%>/pages/contact2.jsp">Contact Us</a>
               </li>
               
             </ul>

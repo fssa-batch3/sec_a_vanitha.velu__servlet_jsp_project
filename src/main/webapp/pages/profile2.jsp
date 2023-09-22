@@ -16,19 +16,19 @@
         <nav class="main-nav">
           <ul>
             <li>
-              <a href="../index.html">Home </a>
+              <a href="<%=request.getContextPath()%>/index2.jsp">Home </a>
             </li>
             <li>
-              <a href="./about2.html">About</a>
+              <a href="<%=request.getContextPath()%>/pages/about2.jsp">About</a>
             </li>
             <li>
-              <a href="./appoinment_list.html">Appoinment List</a>
+              <a href="<%=request.getContextPath()%>/pages/appoinment_list.jsp">Appoinment List</a>
             </li>
             <li>
-              <a href="./active.html">Create plans</a>
+              <a href="<%=request.getContextPath()%>/pages/active.jsp">Create plans</a>
             </li>
             <li>
-              <a href="./contact2.html">Contact Us</a>
+              <a href="<%=request.getContextPath()%>/pages/contact2.jsp">Contact Us</a>
             </li>
           
           </ul>
@@ -61,10 +61,7 @@
           <label for="qualification">Qualification:</label>
           <input id="qualification" class="input_edit" value="Dietitian" type="text" value="<%= dietitianObj.getDietitianQualification() %>"/>
         </div>
-        <div class="input">
-          <label for="specialization">Specialization:</label>
-          <input id="specialization" class="input_edit" value="Co-Founder" type="text" value="<%= dietitianObj.getDietitianQualification() %>"/>
-        </div>
+
         <div class="input">
           <label for="email">Email:</label>
           <input id="email" class="input_edit" type="email" value="<%= email %>"/>
@@ -78,9 +75,7 @@
         <div class="btn">
           <button type="submit">Save</button>
           <button class="edit_btn" onclick="edit()">Edit</button>
-          <button id="delete">DELETE</button>
-          <button  id="logout-btn"><a href="LogoutServlet">Log Out</a></button>
-        </div>
+          <button id="delete">DELETE</button>        </div>
       </form>
     </div>
 

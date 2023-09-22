@@ -37,10 +37,11 @@ if (loggedInEmail == null) {
 			<ul>
 				<li><a href="./patient_index.jsp">Home </a></li>
 				<li><a href="<%=request.getContextPath()%>/pages/about2.jsp">About</a></li>
-				<li><a href="<%=request.getContextPath()%>/pages/diet2.jsp">Consultation</a></li>
+				<li><a href="<%=request.getContextPath()%>/GetAllDietitianServlet">Consultation</a></li>
 				<li><a href="<%=request.getContextPath()%>/pages/active.jsp">Create plans</a></li>
 				<li><a href="<%=request.getContextPath()%>/pages/patient_profile.jsp">Profile</a></li>
 				<li><a href="<%=request.getContextPath()%>/pages/contact2.jsp">Contact Us</a></li>
+				<li><a href="<%= request.getContextPath() %>/LogoutServlet">Log out</a></li>
 			</ul>
 		</nav>
 	</div>

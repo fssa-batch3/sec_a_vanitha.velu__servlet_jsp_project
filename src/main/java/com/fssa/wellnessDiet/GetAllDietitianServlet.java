@@ -25,13 +25,11 @@ import com.fssa.wellnessDiet.service.exception.ServiceException;
 			DietitianService dietitianService = new DietitianService();
 			List<Dietitian> dietitian = null;
 			try {
-				System.out.println("try");
-				dietitian = dietitianService.getAllDietitian();
-				System.out.println("get all service");
+				
+				dietitian = dietitianService.getAllDietitian(); 
+				
 				request.setAttribute("dietitian", dietitian);
-				System.out.println(dietitian);
-			
-	
+				
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/diet2.jsp");
 				dispatcher.forward(request, response);
 		

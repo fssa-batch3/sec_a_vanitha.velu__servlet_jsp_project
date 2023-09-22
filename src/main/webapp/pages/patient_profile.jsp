@@ -15,19 +15,19 @@
         <nav class="main-nav">
           <ul>
             <li>
-              <a href="../index.html">Home </a>
+              <a href="<%=request.getContextPath()%>/pages/patient_index.jsp">Home </a>
             </li>
             <li>
-              <a href="./about2.html">About</a>
+              <a href="<%=request.getContextPath()%>/pages/about2.jsp">About</a>
             </li>
             <li>
-              <a href="./diet2.html">Consultation</a>
+              <a href="<%=request.getContextPath()%>/pages/diet2.jsp">Consultation</a>
             </li>
             <li>
-              <a href="./active.html">Create plans</a>
+              <a href="<%=request.getContextPath()%>/pages/active.jsp">Create plans</a>
             </li>
             <li>
-              <a href="./contact2.html">Contact Us</a>
+              <a href="<%=request.getContextPath()%>/pages/contact2.jsp">Contact Us</a>
             </li>
           
           </ul>
@@ -60,7 +60,6 @@
           <button type="submit">Save</button>
           <button class="edit_btn" onclick="edit()">Edit</button>
           <button id="delete">DELETE</button>
-          <button id="logout-btn">Log Out</button>
         </div>
        
       </form>

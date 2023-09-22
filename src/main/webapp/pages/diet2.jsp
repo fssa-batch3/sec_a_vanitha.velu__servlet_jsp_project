@@ -22,19 +22,19 @@
         <nav class="main-nav">
           <ul>
             <li>
-              <a href="<%=request.getContextPath()%>/patient_index.html">Home </a>
+              <a href="<%=request.getContextPath()%>/pages/patient_index.jsp">Home </a>
             </li>
             <li>
-              <a href="<%=request.getContextPath()%>/about2.html">About</a>
+              <a href="<%=request.getContextPath()%>/pages/about2.jsp">About</a>
             </li>
             <li>
-              <a href="<%=request.getContextPath()%>/diet2.html">Consultation</a>
+              <a href="<%=request.getContextPath()%>/pages/diet2.jsp">Consultation</a>
             </li>
             <li>
-              <a href="<%=request.getContextPath()%>/active.html">Create plans</a>
+              <a href="<%=request.getContextPath()%>/pages/active.jsp">Create plans</a>
             </li>
             <li>
-              <a href="<%=request.getContextPath()%>/contact2.html">Contact Us</a>
+              <a href="<%=request.getContextPath()%>/pages/contact2.jsp">Contact Us</a>
             </li>
           
           </ul>
@@ -44,26 +44,30 @@
     <div class="head">
       <h1>DIETITIAN'S</h1>
     </div>
-    <div class="container">
+   <div class="container">
 
-		<%
-	List<Dietitian> dietitian = (List<Dietitian>) request.getAttribute("dietitian");
-	for (Dietitian d : dietitian) {%>
-		<div id="<%=d.getdietitian_id()%>" onclick="dietUpdate(this.id)"
-			class="image">
-			<img src="<%=d.getDietitianUrl()%>" height="350" width="350">
-			<h3><%=d.getDietitianName()%></h3>
-			<p><%=d.getDietitianQualification()%></p>
-			<button class="button">
-				<a href="/dietitian_detail.jsp?id=<%=d.getdietitian_id()%>">Appointment</a>
-			</button>
-		</div>
+    <%
+    List<Dietitian> dietitian = (List<Dietitian>) request.getAttribute("dietitian");
 
-		<%
-		}
-		%>
-	</div>
+    if (dietitian != null) {
+        for (Dietitian d : dietitian) {
+    %>
+    <div id="<%=d.getdietitian_id()%>" onclick="dietUpdate(this.id)" class="image">
+        <img src="<%=d.getDietitianUrl()%>" height="350" width="350">
+        <h3><%=d.getDietitianName()%></h3>
+        <p><%=d.getDietitianQualification()%></p>
+        <button class="batton">
+            <a href="/dietitian_detail.jsp?id=<%=d.getdietitian_id()%>">Appointment</a>
+        </button>
+    </div>
+    <%
+        }
+    } else {
+        out.println("No dietitian information available.");
+    }
+    %>
 
+</div>
 
 
     <footer class="footer">

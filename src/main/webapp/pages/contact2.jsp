@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contact</title>
     <link rel="stylesheet" href="../assets/css/contact2.css" />
+      <link
+      rel="stylesheet"
+      href="<%=request.getContextPath()%>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
 
@@ -15,17 +19,17 @@
         <nav class="main-nav">
           <ul>
             <li>
-              <a href="../index.html">Home </a>
+              <a href="<%=request.getContextPath()%>/index2.jsp">Home </a>
             </li>
             <li>
-              <a href="./about2.html">About</a>
+              <a href="<%=request.getContextPath()%>/pages/about2.jsp">About</a>
             </li>
             
             <li>
-              <a href="./active.html">Create plans</a>
+              <a href="<%=request.getContextPath()%>/pages/active.jsp">Create plans</a>
             </li>
             <li>
-              <a href="./contact2.html">Contact Us</a>
+              <a href="<%=request.getContextPath()%>/pages/contact2.jsp">Contact Us</a>
             </li>
           
           </ul>
