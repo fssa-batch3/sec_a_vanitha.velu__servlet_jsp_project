@@ -1,4 +1,4 @@
-package com.fssa.wellnessDiet;
+													package com.fssa.wellnessDiet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,6 +28,7 @@ public class GetAllAppointmentServlet extends HttpServlet {
 		try {
 			 
 			appointment = AppointmentService.getAllAppointment(); 
+			System.out.println("=============================="+appointment+"===========================");
 			request.setAttribute("appointment", appointment);
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/AppointmentList.jsp");
@@ -35,6 +36,7 @@ public class GetAllAppointmentServlet extends HttpServlet {
 	
 			
 		} catch (ServiceException e) { 
+			e.printStackTrace();
 			System.out.println(e.getMessage()); 
 		}
 	}

@@ -27,10 +27,10 @@ public class AddAppointmentServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String patientName = request.getParameter("patientName");
 		String email = request.getParameter("email");
-		String address = request.getParameter("address");
 		String problem = request.getParameter("problem");
 		String branch = request.getParameter("branch");
 		String dateTime = request.getParameter("dateTime");
+		String status = request.getParameter("status");
 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date utilDate = null;
@@ -44,7 +44,7 @@ public class AddAppointmentServlet extends HttpServlet {
 		java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
 
 		// adding
-		Appoinment appoinment = new Appoinment(patientName, email, address, problem, branch, sqlDate);
+		Appoinment appoinment = new Appoinment(patientName, email, problem, branch, sqlDate, status); 
 
 		AppointmentService appointmentService = new AppointmentService();
 

@@ -46,9 +46,6 @@
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" required>
-
     <label for="problem">Problem</label>
     <select id="problem" name="problem" required>
       <option value="Gain">Weight gain</option>
