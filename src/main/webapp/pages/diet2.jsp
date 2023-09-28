@@ -57,7 +57,7 @@
         <h3><%=d.getDietitianName()%></h3>
         <p><%=d.getDietitianQualification()%></p>
         <button class="batton">
-            <a href="/dietitian_detail.jsp?id=<%=d.getdietitian_id()%>">Appointment</a>
+            <a href="<%=request.getContextPath()%>/pages/dietitian_detail.jsp?id=<%=d.getdietitian_id()%>">Appointment</a>
         </button>
     </div>
     <%

@@ -74,7 +74,7 @@ tr:hover {
 			%>
 			<tr>
 				<td><%=A.getPatientName()%></td>
-				<td><%=A.getEmail()%></td>
+				<td class="email"><%=A.getEmail()%></td>
 				<td><%=A.getProblem()%></td>
 				<td><%=A.getBranch()%></td>
 				<td><%=A.getDate()%></td>
@@ -82,12 +82,12 @@ tr:hover {
 				<td>
 					<form action="updateStatus" method="post">
 						<input type="hidden" name="appointmentId" value="<%=A.getId()%>">
-						<select name="status">
+						<select class="status" name="status">
 
 							<option value="Pending">Confirm</option> 
 							<option value="Completed">Cancel</option>
 						</select>
-						<button type="submit">Update</button>
+						<button class="submit" type="submit">Update</button>
 					</form>
 				</td>
 
@@ -102,6 +102,28 @@ tr:hover {
 
 		</tbody>
 	</table>
+	<script>
+	 function acceptDiet(email) {
+        let click_id = JSON.parse(localStorage.getItem("clicked_id"));
+        Email.send({
+          SecureToken: "96317604-6aba-41c6-be4b-50fd94e5a7c6",
+          To: email,
+          From: "vaniv7397@gmail.com",
+          Subject: "Your appoinment is Booked!",
+          Body: "Hii your appoinment is Booked please come to the hospital we are waiting for you.",
+        }).then((message) =>
+          alert("Confirmation mail have been sent to your email")
+        );
+      }
+	 document.querySelector("submit").addEventListener("click",(e)=>{
+		 const status = document.querySelector(".status");
+		 const email = document.querySelector("email").value;
+		 if(status.value === "Pending"){
+			 acceptDiet(email);
+		 }	 
+	 })
+	
+    </script>
 
 </body>
 </html>

@@ -323,3 +323,31 @@ ul {
   border-radius: 4px;
   cursor: pointer;
 }
+
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+thead {
+	background-color: #03c988;
+	color: #fff;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+tr:hover {
+	background-color: #ccc;
+}

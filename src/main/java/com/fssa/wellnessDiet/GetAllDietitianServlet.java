@@ -27,9 +27,7 @@ import com.fssa.wellnessDiet.service.exception.ServiceException;
 			try {
 				
 				dietitian = dietitianService.getAllDietitian(); 
-				
 				request.setAttribute("dietitian", dietitian);
-				
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/diet2.jsp");
 				dispatcher.forward(request, response);
 		

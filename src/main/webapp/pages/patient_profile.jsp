@@ -1,3 +1,9 @@
+
+
+<%@page import="com.fssa.wellnessDiet.service.*" %>
+<%@page import="com.fssa.wellnessDiet.dao.*" %>
+<%@page import="com.fssa.wellnessDiet.model.*" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,10 +11,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>profile</title>
-    <link rel="stylesheet" href="../assets/css/profile2.css" />
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/profile2.css" />
   </head>
   <body>
-
+<% 
+	HttpSession session2 = request.getSession(false);
+	String email = (String) session2.getAttribute("loggedInEmail");
+System.out.println(email);
+	UserService service = new UserService();
+	User user = service.findingUserByEmail(email);
+	System.out.println(user.getUserId());
+%>
     <header>
       <div class="wrapper">
         <h1 class="logo">WELLNESS<span>DIET</span></h1>
@@ -46,7 +59,7 @@
 
         <div class="input">
           <label>Email:</label
-          ><input id="email" class="input_edit" type="email" />
+          ><input id="email" class="input_edit" type="email" value="<%= email %>" />
         </div>
         <div class="input">
           <label>Password:</label
@@ -63,7 +76,46 @@
         </div>
        
       </form>
+      
+
     </div>
+
+<%  
+AppointmentService appointmentService  = new AppointmentService();
+System.out.println(user.getUserId());
+Appoinment appoit = appointmentService.getAllAppointmentById(user.getEmail());
+%>
+
+              <table border="1">
+		<thead>
+			<tr>
+				<th>Patient Name</th>
+				<th>Email</th>
+				<th>Problem</th>
+				<th>Branch</th>
+				<th>Date</th>
+				<th>Status</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<%= appoit.getPatientName() %></td>
+				<td class="email"><%= appoit.getEmail() %></td>
+				<td><%= appoit.getProblem() %></td>
+				<td><%= appoit.getBranch() %></td>
+				<td><%= appoit.getDate() %></td>
+				<%-- <td><%=A.getStatus()%></td> --%>
+				<td>
+					<%= appoit.getStatus()%>
+				</td>
+
+			</tr>
+
+
+		</tbody>
+	</table>
 
     <footer class="footer">
       <div class="container4">
@@ -98,75 +150,5 @@
       </div>
     </footer>
 
-    <script>
-      let oneUser = JSON.parse(localStorage.getItem("patient_login"));
-      console.log(oneUser);
-      // for array
-      let Array = JSON.parse(localStorage.getItem("patient_signUp"));
-      let selectedUser = Array.find(function (event) {
-        let emailValue = event["user_id"];
-        if (oneUser == emailValue) {
-          return true;
-        }
-      });
-      console.log(selectedUser);
-      let name = document.getElementById("name");
-      let phoneNumber = document.getElementById("phnumber");
-      let email = document.getElementById("email");
-      let address = document.getElementById("address");
-
-      email.value = selectedUser["user_email"];
-      phoneNumber.value = selectedUser["phoneNumber"];
-      name.value = selectedUser["user_name"];
-      address.value = selectedUser["address"];
-
-      let pForm = document.getElementById("editForm");
-      pForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        let name = document.getElementById("name").value;
-        let phoneNumber = document.getElementById("phnumber").value;
-        let email = document.getElementById("email").value;
-        let address = document.getElementById("address").value;
-
-        let newData = {
-          name,
-          phoneNumber,
-          email,
-          address,
-        };
-        let combinedData = Object.assign(selectedUser, newData);
-        console.log(combinedData);
-        let findIndex = Array.indexOf(selectedUser);
-        console.log(findIndex);
-        Array[findIndex] = combinedData;
-        localStorage.setItem("patient_signUp", JSON.stringify(Array));
-        alert("successfully changed");
-      });
-
-      //
-
-      let delete_user = document.getElementById("delete");
-      delete_user.addEventListener("click", function (event) {
-        event.preventDefault();
-        let indexDel = Array.indexOf(selectedUser);
-        let msg = confirm("Are you sure you want to delete this account");
-        if (msg !== true) {
-          return;
-        } else {
-          Array.splice(indexDel, 1);
-          console.log(Array);
-          localStorage.setItem("patient_signUp", JSON.stringify(Array));
-          // window.location.href ="";
-        }
-      });
-
-
-let logout = document.getElementById("logout-btn");
-logout.addEventListener("click", function (e) {
-  localStorage.removeItem("patient_login");
-  window.location.href="./patient_index.jsp";
-})
-
-    </script>
   </body>
 </html>
