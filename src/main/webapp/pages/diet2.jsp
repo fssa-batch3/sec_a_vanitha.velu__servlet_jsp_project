@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@page import="com.fssa.wellnessDiet.model.*" %>
+<%@page import="com.fssa.wellnessdiet.model.*" %>
 <%@page import="java.util.*" %>
 <!DOCTYPE html>
 <html lang="en">

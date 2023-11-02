@@ -1,6 +1,7 @@
 package com.fssa.wellnessDiet;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -10,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.fssa.wellnessDiet.model.Dietitian;
-import com.fssa.wellnessDiet.model.User;
-import com.fssa.wellnessDiet.service.DietitianService;
-import com.fssa.wellnessDiet.service.exception.ServiceException;
+import com.fssa.wellnessdiet.model.Dietitian;
+import com.fssa.wellnessdiet.model.User;
+import com.fssa.wellnessdiet.service.DietitianService;
+import com.fssa.wellnessdiet.service.exception.ServiceException;
 
 @WebServlet("/DietitianServlet")
 public class DietitianServlet extends HttpServlet {
@@ -42,7 +43,7 @@ public class DietitianServlet extends HttpServlet {
 			if (dietitian1.addDietitian(dietitian)) {
 				System.out.println("dietitian created successfully");
 
-				response.sendRedirect(request.getContextPath() + "/GetAllDietitianServlet");
+				response.sendRedirect(request.getContextPath() + "/index2.jsp");
 
 			}
 		} catch (ServiceException e) {

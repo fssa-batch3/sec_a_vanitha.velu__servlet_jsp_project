@@ -2,15 +2,16 @@ package com.fssa.wellnessDiet;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fssa.wellnessDiet.model.User;
-import com.fssa.wellnessDiet.service.UserService;
-import com.fssa.wellnessDiet.service.exception.ServiceException;
+import com.fssa.wellnessdiet.model.User;
+import com.fssa.wellnessdiet.service.UserService;
+import com.fssa.wellnessdiet.service.exception.ServiceException;
 
 /**
  * Servlet implementation class RegisterServlet
@@ -26,11 +27,17 @@ public class RegisterServlet extends HttpServlet {
 		String name = request.getParameter("username");
 		String type = request.getParameter("type"); 
 
-		System.out.println(1);
-		User user = new User(name, email, password,type, 0);
+		System.out.println(email);
+		System.out.println(password);
+
+		System.out.println(name);
+
+		System.out.println(type);
+
+		User user = new User(name, email, password,type);
 
 		UserService users = new UserService();
-
+		System.out.println(user.toString());
 		try {
 			
 			if (!users.registerUser(user)) {

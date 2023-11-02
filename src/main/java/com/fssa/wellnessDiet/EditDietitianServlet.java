@@ -1,5 +1,6 @@
 package com.fssa.wellnessDiet;
 import java.io.IOException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,9 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.fssa.wellnessDiet.model.Dietitian;
-import com.fssa.wellnessDiet.service.DietitianService;
-import com.fssa.wellnessDiet.service.exception.ServiceException;
+import com.fssa.wellnessdiet.model.Dietitian;
+import com.fssa.wellnessdiet.service.DietitianService;
+import com.fssa.wellnessdiet.service.exception.ServiceException;
 
 
 
@@ -65,14 +66,14 @@ public class EditDietitianServlet extends HttpServlet {
 		dietitian.setdietitian_id(dietitian_id);  
 
 
-		DietitianService service = new DietitianService(); 
+		
 		try {
-			service.updateDietitian(dietitian); 
+			DietitianService.updateDietitian(dietitian); 
 
 			System.out.println(dietitian);
 			response.sendRedirect("ListDietitianServlet");
 		} catch (ServiceException e) {
-			System.out.println("danger");
+		
 			e.printStackTrace();
 		}
 	}

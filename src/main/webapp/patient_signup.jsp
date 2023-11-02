@@ -17,7 +17,7 @@
     <div class="container2">
 		<h1>WELCOME</h1>
 		<form id="form" action="patient_signup"
-			method="post">
+			method="post" >
 			<label for="username">Username:</label> <input type="text"
 				id="username" name="username" required /><br /> <br /> <label
 				for="email">Email:</label> <input type="email" id="email"

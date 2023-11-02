@@ -1,4 +1,4 @@
-<%@page import="com.fssa.wellnessDiet.model.User"%>
+<%@page import="com.fssa.wellnessdiet.model.User"%>
 
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/assets/css/style.css" />

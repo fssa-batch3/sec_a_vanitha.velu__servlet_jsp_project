@@ -1,8 +1,8 @@
 
 
-<%@page import="com.fssa.wellnessDiet.service.*" %>
-<%@page import="com.fssa.wellnessDiet.dao.*" %>
-<%@page import="com.fssa.wellnessDiet.model.*" %>
+<%@page import="com.fssa.wellnessdiet.service.*" %>
+<%@page import="com.fssa.wellnessdiet.dao.*" %>
+<%@page import="com.fssa.wellnessdiet.model.*" %>
 
 <%@page import="java.util.*" %>
 <!DOCTYPE html>
@@ -45,11 +45,11 @@
 
             <p id="about" class="product-description"></p>
             <div class="btn-groups">
-              <a id="formDetail">
-                <button type="submit" class="add-cart-btn">
-                  Book appoinment
-                </button>
-              </a>
+             
+         <button class="add-cart-btn">
+            <a href="<%=request.getContextPath()%>/pages/form2.jsp">Book Appointment</a>
+        </button>
+         
             </div>
           </div>
         </div>

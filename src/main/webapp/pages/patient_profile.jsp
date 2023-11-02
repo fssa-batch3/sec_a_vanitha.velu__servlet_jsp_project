@@ -1,8 +1,8 @@
 
 
-<%@page import="com.fssa.wellnessDiet.service.*" %>
-<%@page import="com.fssa.wellnessDiet.dao.*" %>
-<%@page import="com.fssa.wellnessDiet.model.*" %>
+<%@page import="com.fssa.wellnessdiet.service.*" %>
+<%@page import="com.fssa.wellnessdiet.dao.*" %>
+<%@page import="com.fssa.wellnessdiet.model.*" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,7 @@ System.out.println(email);
       <form id="editForm">
         <div class="input">
           <label>Name:</label>
-          <input id="name" class="input_edit" type="text" />
+          <input id="name" value="chandru" class="input_edit" type="text" />
         </div>
         <div class="input">
           <label>Number:</label>
@@ -60,10 +60,6 @@ System.out.println(email);
         <div class="input">
           <label>Email:</label
           ><input id="email" class="input_edit" type="email" value="<%= email %>" />
-        </div>
-        <div class="input">
-          <label>Password:</label
-          ><input id="password" class="input_edit" value="password" type="password" />
         </div>
         <div class="input">
           <label>Address:</label

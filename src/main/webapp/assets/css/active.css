@@ -314,6 +314,8 @@ a {
   padding: 20px;
   font-family: Arial, sans-serif;
   margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px #888888; 
 }
 
 h2 {
@@ -355,3 +357,4 @@ button[type="submit"]:hover {
 a {
   text-decoration: none;
 }
+

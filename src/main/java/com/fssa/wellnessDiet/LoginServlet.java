@@ -2,6 +2,7 @@ package com.fssa.wellnessDiet;
 
 import java.io.IOException;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.fssa.wellnessDiet.model.User;
-import com.fssa.wellnessDiet.service.UserService;
-import com.fssa.wellnessDiet.service.exception.ServiceException;
+import com.fssa.wellnessdiet.model.User;
+import com.fssa.wellnessdiet.service.UserService;
+import com.fssa.wellnessdiet.service.exception.ServiceException;
 
 /**
  * Servlet implementation class LoginServlet
@@ -36,6 +37,7 @@ public class LoginServlet extends HttpServlet {
 //			response.sendRedirect("pages/patient_index.jsp");
 
 			User user = UserService.findingUserByEmail(email);
+			System.out.println("login servlet : " + user);
 			session.setAttribute("User", user);
 			
 

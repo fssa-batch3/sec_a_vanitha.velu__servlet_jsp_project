@@ -65,7 +65,8 @@
     <label for="dateTime">Date and Time</label>
     <input type="datetime-local" id="dateTime" name="dateTime" required>
 
-    <button type="submit">Submit Appointment</button>
+    <a href="<%=request.getContextPath()%>/pages/AppointmentBooked.jsp"><button type="submit">Submit Appointment</button></a>
+
   </form>
 </div>
 
@@ -76,10 +77,10 @@
           <div class="footer-col">
             <h4>SERVICES</h4>
             <ul>
-              <li><a href="#">Diet counselling</a></li>
+              <li><a href="#">Diet counseling</a></li>
               <li><a href="#">Diet Food</a></li>
               <li><a href="#">Diet chart</a></li>
-              <li><a href="#">Vitual consulation</a></li>
+              <li><a href="#">Visual consultation</a></li>
             </ul>
           </div>
           <div class="footer-col">

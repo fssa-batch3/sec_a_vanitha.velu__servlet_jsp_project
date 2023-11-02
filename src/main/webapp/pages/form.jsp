@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="com.fssa.wellnessDiet.model.User"%>
+<%@page import="com.fssa.wellnessdiet.model.User"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +13,10 @@
 	margin: 0 auto;
 }
 
-.main {
+.whole {
 	background-color: white;
 	width: 400px;
 	border-radius: 10px;
-	margin-left: 500px;
 	margin-top: 200px;
 }
 
@@ -62,7 +61,7 @@
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
-	background: #2479b5;
+	background: #03c988;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -71,7 +70,7 @@
 }
 
 .btn5:hover {
-	background: #2479b5;
+	background: #03c988;
 }
 </style>
 <body>
@@ -80,7 +79,7 @@
 	%>
 	<form id="form" action="<%=request.getContextPath()%>/DietitianServlet"
 		method="post">
-	   
+	   <div class="whole">
 		<div class="inputBox">
 			<input id="image" type="text" name="DietitianUrl" required="required" />
 			<span>Image Url</span>
@@ -103,7 +102,7 @@
 				required="required" /> <span>Address</span>
 		</div>
 		<button type="submit" class="btn5">Create</button>
-
+</div>
 	</form>
 
 </body>

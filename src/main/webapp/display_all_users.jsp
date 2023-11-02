@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ page import="java.util.*"%>
-<%@ page import="com.fssa.wellnessDiet.model.*"%>
+<%@ page import="com.fssa.wellnessdiet.model.*"%>
 <!DOCTYPE html>
 <html>
 <head>

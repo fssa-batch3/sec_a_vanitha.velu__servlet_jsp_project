@@ -1,6 +1,7 @@
 package com.fssa.wellnessDiet;
 
 import java.io.IOException;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,9 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fssa.wellnessDiet.dao.exception.DAOException;
-import com.fssa.wellnessDiet.model.Appoinment;
-import com.fssa.wellnessDiet.service.AppointmentService;
+import com.fssa.wellnessdiet.model.Appoinment;
+import com.fssa.wellnessdiet.service.AppointmentService;
+import com.fssa.wellnessdiet.dao.exception.DAOException;
 
 @WebServlet("/AddAppointmentServlet")
 public class AddAppointmentServlet extends HttpServlet {
@@ -55,7 +56,7 @@ public class AddAppointmentServlet extends HttpServlet {
 			appointmentService.addAppointment(appoinment);
 			System.out.println("appointment created successfully");
 
-			response.sendRedirect(request.getContextPath() + "/GetAllAppointmentServlet");
+			response.sendRedirect(request.getContextPath() + "/pages/AppointmentBooked.jsp");
 
 		} catch (DAOException e) {
 			e.printStackTrace();

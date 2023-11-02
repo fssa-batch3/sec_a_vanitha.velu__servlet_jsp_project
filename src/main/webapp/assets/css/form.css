@@ -52,7 +52,7 @@
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background: #2479b5;
+  background: #03c988;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -61,5 +61,5 @@
 }
 
 .btn5:hover {
-  background: #2479b5;
+  background: #03c988;
 }

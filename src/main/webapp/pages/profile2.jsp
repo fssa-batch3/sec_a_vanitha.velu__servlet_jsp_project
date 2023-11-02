@@ -1,5 +1,5 @@
-<%@ page import="com.fssa.wellnessDiet.service.*"%>
-<%@ page import="com.fssa.wellnessDiet.model.*"%>
+<%@ page import="com.fssa.wellnessdiet.service.*"%>
+<%@ page import="com.fssa.wellnessdiet.model.*"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,7 +37,7 @@
     <div class="container">
     <% 
     
-    String email = (String) session.getAttribute("loggedInEmail");
+    String email = (String) session.getAttribute("dietitian_id");
     User user = new User();
     Dietitian dietitianObj = new Dietitian();
     DietitianService dietitian = new DietitianService();
@@ -46,12 +46,14 @@
     System.out.println(user.getUserId());
     dietitianObj = dietitian.findDietitianByUserId(user.getUserId());
     
+   
+    
     %>
 
       <form id="editForm">
         <div class="input">
           <label for="name">Name:</label>
-          <input id="name" class="input_edit" type="text" value="<%= dietitianObj.getDietitianName() %>"/>
+          <input id="name" class="input_edit" type="text" value=<%=dietitianObj.getDietitianName() %>/>
         </div>
         <div class="input">
           <label for="phnumber">ImageURL:</label>
@@ -59,7 +61,7 @@
         </div>
         <div class="input">
           <label for="qualification">Qualification:</label>
-          <input id="qualification" class="input_edit" value="Dietitian" type="text" value="<%= dietitianObj.getDietitianQualification() %>"/>
+          <input id="qualification" class="input_edit"  type="text" value="<%= dietitianObj.getDietitianQualification() %>"/>
         </div>
 
         <div class="input">
@@ -67,8 +69,12 @@
           <input id="email" class="input_edit" type="email" value="<%= email %>"/>
         </div>
         <div class="input">
-          <label for="password">Password:</label>
-          <input id="password" class="input_edit" value="234567" type="password" />
+          <label for="password">Experience:</label>
+          <input id="password" class="input_edit" value=<%=dietitianObj.getDietitianExperience()  %> type="text" />
+        </div>
+        <div class="input">
+          <label for="password">Address:</label>
+          <input id="password" class="input_edit" value=<%=dietitianObj.getDietitianAddress() %> type="text" />
         </div>
         
        

@@ -2,17 +2,18 @@ package com.fssa.wellnessDiet;
 
 import java.io.IOException;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fssa.wellnessDiet.dao.exception.DAOException;
-import com.fssa.wellnessDiet.service.exception.ServiceException;
-import com.fssa.wellnessDiet.dao.*;
-import com.fssa.wellnessDiet.model.*;
-import com.fssa.wellnessDiet.service.*;
+import com.fssa.wellnessdiet.service.exception.ServiceException;
+import com.fssa.wellnessdiet.dao.*;
+import com.fssa.wellnessdiet.dao.exception.DAOException;
+import com.fssa.wellnessdiet.model.*;
+import com.fssa.wellnessdiet.service.*;
 
 
 

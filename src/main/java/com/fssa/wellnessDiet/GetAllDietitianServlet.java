@@ -1,6 +1,7 @@
 package com.fssa.wellnessDiet;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -11,9 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fssa.wellnessDiet.model.Dietitian;
-import com.fssa.wellnessDiet.service.DietitianService;
-import com.fssa.wellnessDiet.service.exception.ServiceException;
+import com.fssa.wellnessdiet.model.Dietitian;
+import com.fssa.wellnessdiet.service.DietitianService;
+import com.fssa.wellnessdiet.service.exception.ServiceException;
 
 	@WebServlet("/GetAllDietitianServlet") 
 	public class GetAllDietitianServlet extends HttpServlet {
@@ -25,7 +26,7 @@ import com.fssa.wellnessDiet.service.exception.ServiceException;
 			DietitianService dietitianService = new DietitianService();
 			List<Dietitian> dietitian = null;
 			try {
-				
+				System.out.println("done");
 				dietitian = dietitianService.getAllDietitian(); 
 				request.setAttribute("dietitian", dietitian);
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/diet2.jsp");

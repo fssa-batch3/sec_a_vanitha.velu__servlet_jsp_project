@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.fssa.wellnessDiet.model.*"%>
+<%@page import="com.fssa.wellnessdiet.model.*"%>
 <%@page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
@@ -65,7 +65,7 @@ tr:hover {
 		<tbody>
 			<%
 			@SuppressWarnings("unchecked")
-			List<Appoinment> appointment = (List<Appoinment>) request.getAttribute("appointment");
+			List<Appoinment> appointment = (List<Appoinment>) request.getAttribute("appointments");
 			System.out.print(appointment);
 
 			if (appointment != null) {
@@ -84,8 +84,8 @@ tr:hover {
 						<input type="hidden" name="appointmentId" value="<%=A.getId()%>">
 						<select class="status" name="status">
 
-							<option value="Pending">Confirm</option> 
-							<option value="Completed">Cancel</option>
+							<option value="Confirmed">Confirm</option> 
+							<option value="Cancelled">Cancel</option>
 						</select>
 						<button class="submit" type="submit">Update</button>
 					</form>

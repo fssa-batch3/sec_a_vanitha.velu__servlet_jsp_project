@@ -1,6 +1,7 @@
 package com.fssa.wellnessDiet;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -9,9 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fssa.wellnessDiet.model.User;
-import com.fssa.wellnessDiet.service.UserService;
-import com.fssa.wellnessDiet.service.exception.ServiceException;
+import com.fssa.wellnessdiet.model.User;
+import com.fssa.wellnessdiet.service.UserService;
+import com.fssa.wellnessdiet.service.exception.ServiceException;
 
 /**
  * Servlet implementation class GetAllUserServlet

@@ -1,4 +1,4 @@
-<%@page import="com.fssa.wellnessDiet.model.Dietitian"%>
+<%@page import="com.fssa.wellnessdiet.model.Dietitian"%>
 
 <link rel="stylesheet" href="../assets/css/style.css" /> 
 				<%
@@ -48,10 +48,7 @@ if (loggedInEmail == null) {
 
               <li> 
               <a href="<%= request.getContextPath() %>/GetAllAppointmentServlet">appointment list</a> 
-            </li>
-              <li>
-              <a href="<%= request.getContextPath() %>/pages/active.jsp">Create plans</a>
-            </li>
+
               <li>
               <a href="<%= request.getContextPath() %>/pages/form.jsp">Add</a>
               </li>
